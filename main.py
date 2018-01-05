@@ -20,7 +20,7 @@ def btc_history():
     history = r1.json()['bpi']
     # render #1
     r2 = (['Date {}, Price {}'.format(i, history.get(i)) for i in history])
-    return render_template('index.html', r2=r2)
+    return render_template('history.html', result=history)
 
 
 
